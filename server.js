@@ -1,4 +1,5 @@
 const express = require('express')
+const request = require('request');
 const app = express()
 const port = 3000
 
@@ -23,6 +24,21 @@ app.get('/team/:name', function (req, res) {
     } else {
         res.send("Thanks for visiting " + name + " :)")
     }
+})
+
+// Get request that will get information about the pokemon you've named
+app.get('/pokemon/:name', function (req, res) {
+    const name = req.params.name;
+    res.setHeader('Content-Type', 'application/json');
+    request("https://pokeapi.co/api/v2/pokemon-species/"+name.toString(), (err, response, body) => {
+        // If there is an error, return an error string.
+        if (err) {
+            console.log(err);
+            res.send(name + " is not the name of a pokemon (yet)")
+        }
+        // Otherwise, send the response body.
+        res.send(body);
+    })
 })
 
 // Get request that responds with a secret image
