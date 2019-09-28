@@ -12,5 +12,5 @@ To run, navigate to the project directory in terminal and  type `npm start` or `
 3. '/secret' (GET) -  response is a secret image ;)
     * Params: None
 
-5. '/' (POST) -  
-    * Params: 
+5. '/count' (POST) - Displays a simple page where you can increment the count by clicking a button.
+    * Params: None
