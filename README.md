@@ -3,9 +3,17 @@
 To run, navigate to the project directory in terminal and  type `npm start`
 
 ## Routes
-| Route| Type | Response | Params |
-| '/' | (GET) | string 'Hello world' | None | 
-| '/' | (GET) | | None | 
-| '/' | (GET) | | None | 
-| '/' | (PUT) | | None | 
-| '/' | (POST) | | None | 
+1. '/' (GET) - string 'Hello world' 
+    * Params: None
+
+2. '/' (GET) -  
+    * Params: None
+
+3. '/' (GET) -  
+    * Params: None
+
+4. '/' (PUT) -  
+    * Params: 
+    
+5. '/' (POST) -  
+    * Params: 
